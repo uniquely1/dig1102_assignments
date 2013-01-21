@@ -1,4 +1,4 @@
-# Homework 2.1 - Ever wonder what all these signs say?
+git# Homework 2.1 - Ever wonder what all these signs say?
 
 For Homework 1.1, you found a nice project on Github, forked it into your own account, and cloned it into your Cloud 9 IDE account. For this assignment, pick one or more Javascript files from your project (you DID pick a Javascript project, didn't you?) and identify some of the following items of Javascript grammar and vocabulary that we talked about in class, including but not limited to:
 
@@ -31,3 +31,43 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 
 ## Now get to it!
 
+'three.js/docs/page.js:4`
+```javascript
+    var section = /\/(manual|api)\//.exec( window.location.pathname )[ 1 ].toString().split( '.html' )[ 0 ];
+    // Variable: section
+    // Assignment operator: =
+    // Integer: 1
+```
+    
+'three.js/docs/page.js:7`
+```javascript
+    if ( section == 'manual' )
+    // Element: section
+    // Comparison operator: ==
+    // Operand: 'manual'
+```
+
+'three.js/docs/page.js:62-71`
+```javascript
+    {
+
+    	var elements = document.getElementsByTagName( 'code' );
+
+		for ( var i = 0; i < elements.length; i ++ ) {
+
+			var e = elements[ i ];
+			e.className += ' prettyprint';
+
+		}
+        // Block: everything within the curly brackets
+        // Variable: elements
+        // Assignment operator: =
+        // Function: document.getElementByTagName
+        // Comparison operator: <
+        // Arithmetic operator: ++
+        // Assignment operator: +=
+```
+
+
+
+    
