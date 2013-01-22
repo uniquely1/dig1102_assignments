@@ -66,8 +66,60 @@ When you're done editing this file, save it, commit it, and push it to your "ass
         // Comparison operator: <
         // Arithmetic operator: ++
         // Assignment operator: +=
+        // String literal: prettyprint
 ```
 
+'three.js/build/three.js:38'
+```javascript
+    return ( -1 < index && index ) === (this.length - t.length);
+    // Statement: return
+    // Interger: -1
+    // Comparison operator: <
+    // Logical operator; &&
+    // Operand: index
+    // Comparison operator: ===
+    // Arithmetic operator: -
+```
 
+'three.js/build/three.js:58'
+```javascript
+    var vendors = [ 'ms', 'moz', 'webkit', 'o' ];
+    // Variable: vendors
+    // Arithmetic operator: =
+    // Array: [ 'ms', 'moz', 'webkit', 'o' ]
+    // Elements: ms, moz, webkit, o
+```
 
-    
+'three.js/build/three.js:67'
+```javascript
+    if ( window.requestAnimationFrame === undefined )
+    // Statement: if
+    // Function: window.requestAnimationFrame
+    // Comparison operator: ===
+    // Special literal: undefined
+```
+
+'three.js/build/three.js:71'
+```javascript
+    		var currTime = Date.now(), timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
+            // Variable: currTime
+            // Arithmetic operator: =
+            // Function: timeToCall
+            // Arithmetic operator: =
+            // Function: Math.max( 0, 16 - ( currTime - lastTime ) )
+```
+
+'three.js/build/three.js:10205'
+```javascript
+    function handle_hierarchy( node, id, parent, material, obj )
+    // Function: handle_hierarchy
+    // Array: ( node, id, parent, material, obj )
+    // Elements: node, id, parent, material, obj
+```
+
+'three.js/build/three.js:10270'
+```javascript
+    async_callback_gate
+    // Constant: async_callback_gate
+```
+
