@@ -123,3 +123,53 @@ When you're done editing this file, save it, commit it, and push it to your "ass
     // Constant: async_callback_gate
 ```
 
+'three.js/editor/js/ui/Sidebar.Material.js: 33'
+```javascript
+        materialNameRow.add( new UI.Text().setValue( 'Name' ).setColor( '#666' ) );
+        // Function: materialNameRow.add
+        // Liteeral: 'Name'
+```
+
+'three.js/editor/js/ui/Sidebar.Material.js: 233'
+```javascript
+        if ( material instanceof materialClasses[ materialClass.getValue() ] == false ) {
+        // Statement: if
+        // Comparison operator: ==
+        // Boolean: false
+```
+
+'three.js/editor/js/ui/Sidebar.Material.js: 240'
+```javascript
+    if ( material.color !== undefined )
+    // Statement: if
+    // Object: material.color
+    // Comparison operator: !==
+    // Value: undefined
+```
+
+'three.js/editor/js/ui/Sidebar.Material.js: 355'
+```javascript
+                    material.specularMap = specularMapEnabled ? materialSpecularMap.getValue() : null;
+                    // Object: material.specularMap
+                    // Arithmetic operator: =
+                    // Conditional operator: ?
+                    // Literal: null
+```
+
+'three.js/editor/js//ui/Sidebar.Material.js: 362'
+```javascript
+                    if ( specularMapEnabled ) textureWarning = true;
+                    // Statment: if
+                    // Arithmetic operator: =
+                    // Boolean: true
+```
+
+'three.js/editor/js/ui/Sidebar.Material.js: 456'
+```javascript
+        for ( var key in materialClasses ) {
+        // Statement: for
+        // Variable: key
+        // In operator: in
+```
+
+
