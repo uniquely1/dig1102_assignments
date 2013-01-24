@@ -127,7 +127,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 ```javascript
         materialNameRow.add( new UI.Text().setValue( 'Name' ).setColor( '#666' ) );
         // Function: materialNameRow.add
-        // Liteeral: 'Name'
+        // Literal: 'Name'
 ```
 
 'three.js/editor/js/ui/Sidebar.Material.js: 233'
@@ -172,4 +172,56 @@ When you're done editing this file, save it, commit it, and push it to your "ass
         // In operator: in
 ```
 
+'three.js/source/cameras/PerspectiveCamera.js: 96'
+```javascript
+            var left = aspect * bottom;
+            // Variable: left
+            // Arithmetic operator: =
+            // Arithmetic operator: *
+```
 
+'threee.js/source/cameras/PerspectiveCamera.js: 104' 
+```javascript
+            top - ( this.y + this.height ) * height / this.fullHeight,
+            // Arithmetic operator: -
+            // String: ( this.y + this.height )
+            // Arithmetic operator: +
+            // Arithmetic operator: *
+            // Arithmetic operator: /
+```
+
+'three.js/source/core/BufferGeometry.js: 48'
+```javascript
+        if ( positionArray !== undefined ) {
+            
+        // Sttement: if
+        // String: ( positionArray !== undefined )
+        // Compariason operator: !==
+        // Literal: undefined
+```
+
+'three.js/source/core/BufferGeometry.js: 85'
+```javascript
+            if( positions.length >= 3 ) {
+            // Statement: if
+            // String: ( positions.length >= 3 )
+            // Comparison operator: >=
+            // Interger: 3
+```
+
+'three.js/source/core/BufferGeometry.js: 91'
+```javascript
+            for ( var i = 3, il = positions.length; i < il; i += 3 ) {
+            // Statement: for
+            // Variable: i
+            // Arthimetic operator: =
+            // Literal: i1
+            // Arithmetic operator: =
+            // Comparison operator: <
+            // Variable: i
+            // Assignment operator: +=
+            // Integer: 3
+```
+
+
+    
