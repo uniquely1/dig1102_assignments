@@ -153,7 +153,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
                     // Object: material.specularMap
                     // Arithmetic operator: =
                     // Conditional operator: ?
-                    // Literal: null
+                    // SpecialLiteral: null
 ```
 
 'three.js/editor/js//ui/Sidebar.Material.js: 362'
@@ -194,10 +194,10 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 ```javascript
         if ( positionArray !== undefined ) {
             
-        // Sttement: if
+        // Statement: if
         // String: ( positionArray !== undefined )
         // Compariason operator: !==
-        // Literal: undefined
+        // Special Literal: undefined
 ```
 
 'three.js/source/core/BufferGeometry.js: 85'
@@ -217,11 +217,65 @@ When you're done editing this file, save it, commit it, and push it to your "ass
             // Arthimetic operator: =
             // Literal: i1
             // Arithmetic operator: =
+            // Object: positions
+            // Object property: length
             // Comparison operator: <
             // Variable: i
             // Assignment operator: +=
             // Integer: 3
 ```
+
+'three.js/source/core/BufferGeometry.js: 103'
+```javascript
+            } else if ( x > bb.max.x ) {
+            // Statement: else if
+            // Variable: x
+            // Arithmetic operator: >
+            // Variable: bb.max.x
+```
+
+'three.js/source/core/BufferGeometry.js: 133'
+```javascript
+        if ( positions === undefined || positions.length === 0 )
+        // Statement: if 
+        // Object: positions
+        // Comparison operator: ===
+        // Special literal: undefined
+        // Object: positions
+        // Object property: length
+        // Comparison operator: ===
+        // Integer: 0
+```
+
+'three.js/source/core/BufferGeometry.js: 144'
+```javascript
+        if ( this.boundingSphere === null )
+        // Statement: if
+        // Object: this
+        // Object property: boundingSphere
+        // Comparison operator: ===
+        // Special literal: null
+```
+
+'three.js/source/core/BufferGeometry.js: 150'
+```javascript
+            var positions = this.attributes[ "position" ].array;
+            // Variable: positions
+            // Arithmetic operator: =
+            // Object: this
+            // Object property: attributes
+            // Object property name: position
+```
+
+'three.js/source/core/BufferGeometry.js: 163'
+```javascript
+                radiusSq =  x * x + y * y + z * z;
+                // Object: radiusSq
+                // Arithmetic operator:=
+                // Variables: x, x, y, y, z, z
+                // Arithmetic operators: *, +
+```
+                
 
 
     
