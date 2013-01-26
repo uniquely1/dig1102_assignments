@@ -275,7 +275,229 @@ When you're done editing this file, save it, commit it, and push it to your "ass
                 // Variables: x, x, y, y, z, z
                 // Arithmetic operators: *, +
 ```
-                
+
+'three.js/source/core/Geometry.js: 324'
+```javascript
+            if ( ! face.__originalVertexNormals ) face.__originalVertexNormals = [];
+            // Statement: if
+            // Logical operator: ! 
+            // Constant: face._originalVertexNormals
+            // Arithmetic operator: =
+```
+
+'three.js/source/core/Geometry.js: 471'
+```javascript
+            for ( j = 0, jl = offsets.length; j < jl; ++ j )
+            // Statement: for
+            // Object: j
+            // Arithmetic operator: =
+            // Integer: 0
+            // Object: j1
+            // Arithmetic operator: =
+            // Object: offsets
+            // Object property: length
+            // Object: j
+            // Arithmetic operator: <
+            // Object: j1
+            // Arithmetic operator: ++
+```
+
+'three.js/source/core/Geometry.js: 471'
+```javascript
+                tmp.sub( n.multiplyScalar( n.dot( t ) ) ).normalize();
+                // Object: tmp
+                // Object property: sub
+                // Literal: n.multiplyScalar
+```
+
+'three.js/source/core/Object3D.js: 112'
+```javascript
+            if ( this.useQuaternion === false )  
+            // Statement: if
+            // Arithmetic operator: ===
+            // Boolean: false
+```
+
+'three.js/source/core/Object3D.js: 126'
+```javascript
+        add: function ( object ) {
+        // Function: object
+```
+
+
+'three.js/source/core/Object3D.js: 150'
+```javascript
+            while ( scene.parent !== undefined ) {
+            // Comparison operator: !==
+            // Special literal: undefined
+```
+
+'three.js/source/core/Object3D.js: 156'
+```javascript
+             if ( scene !== undefined && scene instanceof THREE.Scene )  {
+            // Statement: if
+            // Object: scene
+            // Comparison operator: !==
+            // Logical operator: &&
+```
+
+'three.js/source/core/Object3D.js: 209'
+```javascript        
+        for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+        // Statement: for
+        // Variable: i
+        // Arithmetic operator: =
+        // Integer: 0
+        // Integer: 1
+        // Object: this
+        // Properties: children, length
+        // Variable: i
+        // Arithmetic operator: <
+        // Integer: 1
+        // Variable: i
+        // Arithmetic operator: ++
+```
+
+'three.js/source/core/Object3D.js: 219'
+```javascript
+            if ( recursive === true ) {
+            // Statement: if
+            // Object: recursive
+            // Arithmeticd operator: ===
+            // Boolean: true
+```
+
+'three.js/source/extras/ScenUtils.js: 11'
+```javascript
+        for ( var i = 0, l = materials.length; i < l; i ++ ) {
+        // Statement: for
+        // Variable: i
+        // Arithmetic operator: =
+        // Integer: 0
+        // Integer: 1
+        // Arithmetic operator: =
+        // Object: materials
+        // Obkject property: length
+        // Variable: i
+        // Arithmetic operator: <
+        // Integer: 1
+        // Arithmetic operator: ++
+```
+
+
+'three.js/source/extras/ScenUtils.js: 21'
+```javascript
+    detach : function ( child, parent, scene ) {
+    // Function: detach
+    // Array: child, parent, scene
+```
+
+'three.js/source/extras/lights/HemisphereLight.js: 11'
+```javascript
+    this.position = new THREE.Vector3( 0, 100, 0 );
+    // Object: this
+    // Object property: position
+    // Arithmetic operator: =
+    // Object: THREE
+    // Object property: Vector3
+    // Value array: 0, 100, 0
+```
+
+'three.js/source/extras/lights/HemisphereLight.js: 13'
+```javascript
+    this.intensity = ( intensity !== undefined ) ? intensity : 1;
+    // Object: this
+    // Object property: intensity
+    // Arithmetic operator: =
+    // Value: intensity
+    // Comparison operator: !==
+    // Special literal: undefined
+```
+
+'three.js/source/extras/lights/PointLight.js: 5'
+```javascript
+THREE.PointLight = function ( hex, intensity, distance ) {
+// Object: THREE
+// Object property: PointLight
+// Arithmetic operator: =
+// Function: function
+// Value array: hex, intensity, distance
+```
+
+'three.js/source/extras/lights/SpotLight.js: 14'
+```javascript
+this.angle = ( angle !== undefined ) ? angle : Math.PI / 2;
+// Object: this
+// Object property: angle
+// Arithmetic operator: =
+// Value: angle
+// Comparison operator: !=
+// Special literal: undefined
+// Object: Math
+// Object property: PI
+// Arithmetic operator: / 
+// Integer: 2
+```
+
+'three.js/source/extras/lights/SpotLight.js: 15'
+```javascript
+this.exponent = ( exponent !== undefined ) ? exponent : 10;
+// Object: this
+// Object property: exponent
+// Arithmetic operators: =, !==
+```
+
+'three.js/source/extras/loaders/JSONLoader.js: 8'
+```javascript
+THREE.Loader.call( this, showStatus );
+// Object: THREE
+// Object property: Loader
+// Function: call
+// Value array: this, showstatus
+```
+
+'three.js/source/extras/loaders/JSONLoader.js: 22'
+```javascript
+texturePath = texturePath && ( typeof texturePath === "string" ) ? texturePath : this.extractUrlBase( url );
+// Object: texturePath
+// Arithmetic operator: =
+// Object: texturePath
+// Logical operator: &&
+```
+
+'three.js/source/extras/loaders/JSONLoader.js: 44'
+```javascript
+                    context.createModel( json, callback, texturePath );
+                    // Object: context
+                    // Object property: createModel
+                    // Value array: json, callback, texturePath
+```
+    
+'three.js/source/extras/loaders/JSONLoader.js: 48'
+```javascript
+                    console.warn( "THREE.JSONLoader: [" + url + "] seems to be unreachable or file there is empty" );
+                    // Object: console
+                    // Object property: warn
+                    // Arithmetic operator: =
+```
+
+'three.js/source/extras/loaders/JSONLoader.js: 64'
+```javascript
+        } else if ( xhr.readyState === xhr.LOADING ) {
+        // Statement: else if
+        // Arithmetic operator: ===
+```
+
+'three.js/source/extras/loaders/JSONLoader.js: 70'
+```javascript
+                    length = xhr.getResponseHeader( "Content-Length" );
+                    // Value: length
+                    // Arithmetic operator: =
+                    // Object: xhr
+                    // Object property: getResponseHeader
+                    // Object property name: Content-Length
+```
+
 
 
     
