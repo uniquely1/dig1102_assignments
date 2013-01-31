@@ -3,7 +3,7 @@
 
 var Namespace = ( function () {} );
     
-    /* utility */
+// utility 
     
     var merge = function ( target, source ) {
         for ( var p in source )        
@@ -14,7 +14,7 @@ var Namespace = ( function () {} );
         if ( ! (/^[a-z0-9_.]+/ ).test ( fqn )) throw ( 'invalid namespace' );
     };
     
-/* Merge Procedure */
+// Merge Procedure 
 
     var Procedure = function _Private_Class_Of_Proc () {
         merge ( this, {
@@ -63,7 +63,7 @@ var Namespace = ( function () {} );
                 });
             }
             
-/* Finish Process */
+// Finish Process 
 
             var finishedProcess = 0;
             if ( step.length === 0 ) _self._invoke ();
@@ -78,13 +78,13 @@ var Namespace = ( function () {} );
         }
     });
 
-/*Create Procedure*/
+// Create Procedure
 
     var createProcedure = function ( state ) {
         return new Procedure () .next ( state );
     };
     
-/* Merge Namespace Object */
+// Merge Namespace Object 
 
     var NamespaceObject = function _Private_Class_Of_NamespaceObject ( fqn ) {
         merge ( this, {
@@ -114,7 +114,7 @@ var Namespace = ( function () {} );
         getExport: function ( importName ) {
             if ( importName === '*' ) return this.stash;
             
-/* Import Names */
+// Import Names 
 
             var importNames = importName.split (','),
                 retStash    = {};
@@ -131,7 +131,7 @@ var Namespace = ( function () {} );
         }
     });
     
-/* NamespaceObjectFactory */
+// NamespaceObjectFactory 
 
     var NamespaceObjectFactory = ( function () {
         var cache = {};
@@ -143,7 +143,7 @@ var Namespace = ( function () {} );
         };
     })();
     
-/*NamespaceDefinition */
+// NamespaceDefinition 
 
     var NamespaceDefinition = function _Private_Class_Of_NamespaceDefinition ( nsObj ) {
         merge ( this, {
@@ -177,7 +177,7 @@ var Namespace = ( function () {} );
          }
     },
     
-/* mergeStashWithNS */ 
+// mergeStashWithNS 
 
         _mergeStashWithNS function ( nsObj ) {
             var nsList  = nsObj.fqn.split( /\./ );
@@ -187,6 +187,4 @@ var Namespace = ( function () {} );
                 if ( !current[nsList [ i ] ] ) current [ nsList [ i ] ] = {};
                 current = current [ nsList [ i ] ];
             }
-        }
-        
 ```
