@@ -1,92 +1,114 @@
 `namespace-js/src/namespace.js:164`
 ```javascript
 
-   var lastLeaf = nsList[nsList.length-1];
-            current[lastLeaf] = merge(current[lastLeaf] || {}, nsObj.getStash());
+   var lastLeaf = nsList[nsList.length -1 ];
+            current [ lastLeaf ] = merge(current [ lastLeaf ] || {}, nsObj.getStash ());
         },
-        loadImport: function(nsObj,importName){
-            if( importName ){
-                merge( this.stash, nsObj.getExport(importName) );
-            }else{
-                this._mergeStashWithNS( nsObj );
+        
+// loadImport
+        
+        loadImport: function ( nsObj,importName ) {
+            
+            if ( importName ) 
+            {
+                merge ( this.stash, nsObj.getExport ( importName ) );
+            } else  
+            { 
+                this._mergeStashWithNS ( nsObj );
             }
         },
-        define: function(callback){
+        
+// define Callback function
+
+        define: function ( callback ) {
             var nsDef = this, nsObj = this.namespaceObject;
-            this.defineCallback = function($c) {
+            this.defineCallback = function ( $c ) {
                 var ns = { 
-                    provide : function(obj){
-                        nsObj.merge(obj);
+                    provide : function ( obj ) {
+                        nsObj.merge ( obj );
                         $c();
                     } 
                 }; 
-                merge(ns, nsDef.getStash());
-                merge(ns, nsObj.getStash());
-                callback(ns);
+                merge ( ns, nsDef.getStash ());
+                merge ( ns, nsObj.getStash ());
+                callback ( ns );
             };
         },
-        getStash: function(){
+        
+// getStash
+
+        getStash: function () {
             return this.stash;
         },
-        valueOf: function(){
-            return "#NamespaceDefinition<"+this.namespaceObject+"> uses :" + this.useList.join(',');
+        valueOf: function () {
+            return "#NamespaceDefinition<" + this.namespaceObject + "> uses :" + this.useList.join( ',' );
         },
-        apply: function(callback){
+        apply: function ( callback ) {
             var nsDef = this;
-            createProcedure(nsDef.requires)
-            .next(nsDef.defineCallback)
-            .call(nsDef,function(){
-                callback( nsDef.getStash() );
+            createProcedure ( nsDef.requires )
+            .next ( nsDef.defineCallback )
+            .call( nsDef, function () {
+                callback ( nsDef.getStash () );
             });
         }
     });
+    
+// createNamespace
 
-    var createNamespace = function(fqn){
-        return new NamespaceDefinition(
-            NamespaceObjectFactory.create(fqn || 'main')
+    var createNamespace = function(fqn) {
+        return new NamespaceDefinition (
+            NamespaceObjectFactory.create ( fqn || 'main' )
         );
     };
-    merge(createNamespace, {
+    merge ( createNamespace, {
         'Object'  : NamespaceObjectFactory,
         Definition: NamespaceDefinition,
         Proc      : createProcedure
-    });
+    } );
     return createNamespace;
-})();
+} )();
 
-Namespace.use = function(useSyntax){ return Namespace().use(useSyntax); }
-Namespace.fromInternal = Namespace.GET = (function(){
-    var get = (function(){
-        var createRequester = function() {
+// Namespace requestor
+
+Namespace.use = function ( useSyntax ) { return Namespace () .use ( useSyntax ); }
+Namespace.fromInternal = Namespace.GET = ( function () {
+    
+    var get = ( function () {
+        var createRequester = function () {
             var xhr;
-            try { xhr = new XMLHttpRequest() } catch(e) {
-                try { xhr = new ActiveXObject("Msxml2.XMLHTTP.6.0") } catch(e) {
-                    try { xhr = new ActiveXObject("Msxml2.XMLHTTP.3.0") } catch(e) {
-                        try { xhr = new ActiveXObject("Msxml2.XMLHTTP") } catch(e) {
-                            try { xhr = new ActiveXObject("Microsoft.XMLHTTP") } catch(e) {
-                                throw new Error( "This browser does not support XMLHttpRequest." )
+            try { xhr = new XMLHttpRequest () } catch ( e ) {
+                try { xhr = new ActiveXObject ( "Msxml2.XMLHTTP.6.0" ) } catch ( e ) {
+                    try { xhr = new ActiveXObject ( "Msxml2.XMLHTTP.3.0" ) } catch ( e ) {
+                        try { xhr = new ActiveXObject ( "Msxml2.XMLHTTP" ) } catch ( e ) {
+                            try { xhr = new ActiveXObject ( "Microsoft.XMLHTTP" ) } catch ( e ) {
+                                throw new Error ( "This browser does not support XMLHttpRequest." )
                             }
                         }
                     }
                 }
             }
             return xhr;
-        };
-        var isSuccessStatus = function(status) {
-            return (status >= 200 && status < 300) || 
+        }; 
+        
+// isSuccessStatus
+
+        var isSuccessStatus = function ( status ) {
+            return ( status >= 200 && status < 300 ) || 
                     status == 304 || 
                     status == 1223 ||
-                    (!status && (location.protocol == "file:" || location.protocol == "chrome:") );
+                    ( ! status && ( location.protocol == "file:" || location.protocol == "chrome:" ) );
         };
         
-        return function(url,callback){
-            var xhr = createRequester();
-            xhr.open('GET',url,true);
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState === 4){
-                    if( isSuccessStatus( xhr.status || 0 )){
+        return function ( url,callback ) {
+            var xhr = createRequester ();
+            xhr.open( 'GET', url, true );
+            xhr.onreadystatechange = function () {
+                
+                if ( xhr.readyState === 4 ) {
+                    if ( isSuccessStatus( xhr.status || 0 )) {
                         callback(true,xhr.responseText);
-                    }else{
+                    } else              
+                    {
                         callback(false);
                     }
                 }
