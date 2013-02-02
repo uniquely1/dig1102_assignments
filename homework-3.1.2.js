@@ -106,71 +106,80 @@ Namespace.fromInternal = Namespace.GET = ( function () {
                 
                 if ( xhr.readyState === 4 ) {
                     if ( isSuccessStatus( xhr.status || 0 )) {
-                        callback(true,xhr.responseText);
+                        callback ( true, xhr.responseText );
                     } else              
                     {
-                        callback(false);
+                        callback ( false );
                     }
                 }
             };
-            xhr.send('')
+            xhr.send( '' )
         };
     })();
+    
+// isManualProvide
 
-    return function(url,isManualProvide){
+    return function ( url, isManualProvide ) {
         return function(ns){
-            get(url,function(isSuccess,responseText){
-                if( isSuccess ){
-                    if( isManualProvide )
-                        return eval(responseText);
+            get ( url, function ( isSuccess, responseText ) {
+                if( isSuccess )             {
+                    if ( isManualProvide )
+                        return eval ( responseText );
+                        
                     else
-                        return ns.provide( eval( responseText ) );
-                }else{
+                        return ns.provide ( eval ( responseText ) ); } 
+                    else                    {
                     var pub = {};
-                    pub[url] = 'loading error';
-                    ns.provide(pub);
+                    pub [ url ] = 'loading error';
+                    ns.provide ( pub );
                 }
             });
         };
     };
 })();
 
-Namespace.fromExternal = (function(){
+// Namespace.fromExternal
+
+Namespace.fromExternal = ( function () {
     var callbacks = {};
-    var createScriptElement = function(url,callback){
-        var scriptElement = document.createElement('script');
+    var createScriptElement = function ( url, callback ) {
+        var scriptElement = document.createElement( 'script' );
 
         scriptElement.loaded = false;
         
-        scriptElement.onload = function(){
+        scriptElement.onload = function (){
             this.loaded = true;
             callback();
         };
-        scriptElement.onreadystatechange = function(){
-            if( !/^(loaded|complete)$/.test( this.readyState )) return;
-            if( this.loaded ) return;
+        scriptElement.onreadystatechange = function () {
+            if ( !/^(loaded|complete)$/.test( this.readyState )) return;
+            if ( this.loaded ) return;
             scriptElement.loaded = true;
             callback();
         };
+        
         scriptElement.src = url;
         document.body.appendChild( scriptElement );
         return scriptElement.src;
     };
-    var domSrc = function(url){
-        return function(ns){
-            var src = createScriptElement(url,function(){
+    
+// domSrc
+
+    var domSrc = function ( url ) {
+        return function ( ns ) {
+            var src = createScriptElement ( url, function () {
                 var name = ns.CURRENT_NAMESPACE;
-                var cb = callbacks[name];
-                delete callbacks[name];
-                cb( ns );
+                var cb = callbacks [ name ];
+                delete callbacks [ name ];
+                cb ( ns );
             });
         }
     };
-    domSrc.registerCallback = function(namespace,callback) {
-        callbacks[namespace] = callback;
+    domSrc.registerCallback = function ( namespace, callback ) {
+        callbacks [ namespace ] = callback;
     };
     return domSrc;
 })();
 
-try{ module.exports = Namespace; }catch(e){}
+try { module.exports = Namespace; } catch ( e ) {}
 ```
