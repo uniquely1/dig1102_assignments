@@ -90,7 +90,7 @@ this ends the dictionary
 		}
 ```
 
-`dig1102-assignments/three.js/exampoles/js/exporters/GeometryExporter.js:15`
+`dig1102-assignments/three.js/examples/js/exporters/GeometryExporter.js:15`
 ```javascript
 
     for ( var i = 0; i < geometry.vertices.length; i ++ ) {
@@ -99,5 +99,37 @@ this ends the dictionary
 			vertices.push( vertex.x, vertex.y, vertex.z );
             // for variable i when these criteria are met and there is a list then push these (vertex.x, vertex.y, vertex.z 
 ```
+
+`dig1102-assignments/three.js/examples//js/exproters/GeometryExporter.js:139`
+```javascript
+
+function setBit( value, position, enabled ) {
+                // this array is a list of values needed for this function
+
+    		return enabled ? value | ( 1 << position ) : value & ( ~ ( 1 << position) );
+
+		}
+
+		function getNormalIndex( x, y, z ) {
+                            
+				var hash = x.toString() + y.toString() + z.toString();
+                // these are variables that will be added to list
+
+				if ( normalsHash[ hash ] !== undefined ) {
+
+					return normalsHash[ hash ];
+
+				}
+
+				normalsHash[ hash ] = normals.length / 3;
+               
+				normals.push( x, y, z );
+                // this is pushing the above returned values to the end of the hash list
+
+				return normalsHash[ hash ];
+
+		}
+```
+
 
 
