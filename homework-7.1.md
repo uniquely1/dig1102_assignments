@@ -1,21 +1,26 @@
 `jQuery/src/core.js:800`
 ```javascript
-function isArraylike( obj ) {
-    // function name isArraylike
+// function name isArraylike
    // argument is obj
+   //variables 
+   //*length 
+   //*type
+   // line 804 is a conditional argument
+   // line 808 is a conditional argument
+   // line 812 contains the return values for the entire function
+
+function isArraylike( obj ) {
+    
     var length = obj.length,
-		type = jQuery.type( obj );
+		type = jQuery.type( obj );        
         
-        //variables *length *type        
 
 	if ( jQuery.isWindow( obj ) ) {
-        // line 11 is a conditional argument
-		return false;
+       return false;
 	}
    
 	if ( obj.nodeType === 1 && length ) {
-        // line 16 is a conditional argument
-		return true;
+       return true;
 	}
 
 	return type === "array" || type !== "function" &&
