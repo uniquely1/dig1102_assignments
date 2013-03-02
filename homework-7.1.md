@@ -7,7 +7,7 @@
    //*type
    // line 804 is a conditional argument
    // line 808 is a conditional argument
-   // line 812 contains the return values for the entire function
+   // line 812 contains the return values for the entire function 
 
 function isArraylike( obj ) {
     
@@ -32,6 +32,16 @@ function isArraylike( obj ) {
 
 `jQuery/src/effects.js: 586`
 ```javascript
+
+// function name genFx
+// arguments type and includeWidth
+// variables
+// *type
+// *attrs
+// *i
+// line 594 is a conditional argument
+// lind 599 is a conditional argument
+// line 603 returns values for attrs if line 599 is truthy
 function genFx( type, includeWidth ) {
     var which,
 		attrs = { height: type },
@@ -55,6 +65,19 @@ function genFx( type, includeWidth ) {
 
 `jQuery/src/attributes.js: 395`
 ```javascript
+
+// anonymous function for prop
+// arguements elem, name, value
+// variables
+// *ret
+// *hooks
+// *notxml
+// *nType
+// lines 400-413 are conditional arguments
+// line 414 returns value for ret if previous conditional arguments are truthy
+// line 417 returns value for elem name if previous conditional arguments are falsey
+// line 422 returns value for ret if line 413 conditions aren't truthy but line 421 conditions are truthy
+// line 425 returns value for elem name if line 421 conditions aren't truthy
     prop: function( elem, name, value ) {
 		var ret, hooks, notxml,
 			nType = elem.nodeType;
