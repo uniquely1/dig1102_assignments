@@ -15,36 +15,36 @@ var assert = require("assert")
 */
  
  /*
- *testing multiplication():
+ * testing subtraction
  * one | two | out
  * ===============
- * +1 | +1 | +1
- * +1 | +0 | +0
- * +1 | -1 | -1
- * -1 | -1 | +1
- * +2 | +2 | +4
- * +2 | +0 | +0
- * +2 | -2 | -4
- * -2 | -2 | +4
- * +0 | +0 | +0
+ * +1 | +1 | +0
+ * +1 | +0 | +1
+ * +1 | -1 | +2
+ * -1 | +1 | -2
+ * -1 | +0 | -1
+ * +2 | +1 | +1
+ * +2 | +0 | +2
+ * +2 | -1 | +3
+ * +2 | +1 | +1
  */
  
-// This is a multiplication function
-var multiplication = function(a, b) {
-    return (a*b);
+ // This is a subtraction function
+ var subtraction = function(a,b){
+     return (a-b)
 }
- // These are multiplication tests
-assert.equal(1,multiplication(1,1));
-assert.equal(0,multiplication(1,0));
-assert.equal(-1,multiplication(1,-1));
-assert.equal(1,multiplication(-1,-1));
-assert.equal(4,multiplication(2,2));
-assert.equal(0,multiplication(2,0));
-assert.equal(-4,multiplication(2,-2));
-assert.equal(4,multiplication(-2,-2));
-assert.equal(0,multiplication(0,0));
- 
-  
+
+assert.equal(0,subtraction(1,1));
+assert.equal(1,subtraction(1,0));
+assert.equal(2,subtraction(1,-1));
+assert.equal(-2,subtraction(-1,1));
+assert.equal(-1,subtraction(-1,0));
+assert.equal(1,subtraction(2,1));
+assert.equal(2,subtraction(2,0));
+assert.equal(3,subtraction(2,-1));
+assert.equal(1,subtraction(2,1));
+
+
 
  
  
