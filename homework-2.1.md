@@ -31,7 +31,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 
 ## Now get to it!
 
-'three.js/docs/page.js:4`
+`three.js/docs/page.js:4`
 ```javascript
     var section = /\/(manual|api)\//.exec( window.location.pathname )[ 1 ].toString().split( '.html' )[ 0 ];
     // Variable: section

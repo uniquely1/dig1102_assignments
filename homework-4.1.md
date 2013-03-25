@@ -1,4 +1,4 @@
-git add`dig1102_assigments/homework-3.1.js:120`
+
 ```javascript
 
   var importNames = importName.split (','),

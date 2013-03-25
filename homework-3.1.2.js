@@ -1,5 +1,5 @@
-`namespace-js/src/namespace.js:164`
-```javascript
+//namespace-js/src/namespace.js:164
+//javascript
 
    var lastLeaf = nsList[nsList.length -1 ];
             current [ lastLeaf ] = merge(current [ lastLeaf ] || {}, nsObj.getStash ());
@@ -182,4 +182,3 @@ Namespace.fromExternal = ( function () {
 })();
 
 try { module.exports = Namespace; } catch ( e ) {}
-```

@@ -1,5 +1,6 @@
-`namespace-js/src/namespace.js:2`
-```javascript
+
+//namespace-js/src/namespace.js:2
+//javascript
 
 var Namespace = ( function () {} );
     
@@ -187,4 +188,3 @@ var Namespace = ( function () {} );
                 if ( !current[nsList [ i ] ] ) current [ nsList [ i ] ] = {};
                 current = current [ nsList [ i ] ];
             }
-```
