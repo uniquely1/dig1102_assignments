@@ -30,7 +30,44 @@ var assert = require("assert");
 */
 
 //This is the first test
-assert(0 * 0 == +1);
+//assert(0 * 0 == +1);
 // test failed
+
+//First Multiplication funtion
+var multiplication = function(a, b) {
+
+    return (a * b);
+    
+};
+// First test after writing code
+//assert( multiplication(+0, +0) == +0, '+0 * +0 == +0');
+// test passed
+
+// Refactored multiplication function 
+function multiplication(a, b, c){
+    return(multiplication(a, b) == c);
+}
+// First test after refactoring
+assert(multiplication(+0, +0) == +0);
+// test passed
+
+assert(multiplication(+0, +1) == +0);
+assert(multiplication(+0, -1) == +0);
+assert(multiplication(+1, +1) == +1);
+assert(multiplication(+1, -1) == -1);
+
+//refactored assert function
+function testMultiplication(a, b, c){
+    assert(multiplication(a, b) == c );
+}
+
+//first test using refactored assert function
+testMultiplication(-1, -1, '+1');
+//test passed
+
+//second test; set to fail
+testMultiplication(+1, +2, '+3');
+//test failed as planned
+
 
 
