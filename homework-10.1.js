@@ -40,7 +40,7 @@ var multiplication = function(a, b) {
     
 };
 // First test after writing code
-//assert( multiplication(+0, +0) == +0, '+0 * +0 == +0');
+assert( multiplication(+0, +0) == +0, '+0 * +0 == +0');
 // test passed
 
 // Refactored multiplication function 
@@ -66,8 +66,12 @@ testMultiplication(-1, -1, '+1');
 //test passed
 
 //second test; set to fail
-testMultiplication(+1, +2, '+3');
+//testMultiplication(+1, +2, '+3');
 //test failed as planned
 
+//second test w/refactored assert;should pass
+testMultiplication(+1, +2, '+2');
+//test passed
 
-
+testMultiplication(+1, -2, '-2');
+testMultiplication(+2, +2, '+4');
