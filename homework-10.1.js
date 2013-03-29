@@ -1,4 +1,4 @@
-git statuagitvar assert = require("assert");
+var assert = require("assert");
 
 //assert(1 + 1 == 1);
 //assert.equal(1, 1 + 1 '1 + 1 does not equal 1');
@@ -18,7 +18,7 @@ git statuagitvar assert = require("assert");
  * testing division():
  * one | two | out
  * ===============
- *  +0 | +0 | +0
+ *  +0 | +0 | undefined
  *  +0 | +1 | +0
  *  +0 | -1 | +0
  *  +1 | +1 | +1
@@ -30,10 +30,21 @@ git statuagitvar assert = require("assert");
 */
 
 //first division test
-//assert( division(+0 / +0) == +0, '+0 / +0 == +0');
+//assert( division(+0, +0) == +0, '+0 / +0 == +0');
 //test failed
 
 //This is a division function
 var division = function(a, b) {
-    return (a/b);
-}
+    return (a / b);
+};
+
+//first test after writing function; written to fail
+//assert( division (+0, +0) == +1, ' +0 / +0 == +1');
+// test failed as expected
+
+//assert( division(+0, +0) === undefined, '+0 / +0 === undefined');
+//test got undefined result
+
+assert (division (+0, +1) == +0, '+0 / +1 == +0');
+//test passed
+
