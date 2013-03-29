@@ -51,3 +51,17 @@ assert(division (+0, +1) == +0, '+0 / +1 == +0');
 assert(division (+0, -1) == -0, '+0 / -1 == -0');
 assert(division (+1, +1) == +1, '+1 / =1 == +1');
 
+//refactored division test function
+function testDivision(a, b, c){
+    assert(division(a, b) == c);
+};
+//first test after refactoring test function
+testDivision(+1, -1, '-1');
+//test passed
+
+//test written to fail
+testDivision(-1, -1, '+2');
+// test failed as expected
+
+
+
