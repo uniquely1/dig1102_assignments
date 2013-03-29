@@ -45,6 +45,9 @@ var division = function(a, b) {
 //assert( division(+0, +0) === undefined, '+0 / +0 === undefined');
 //test got undefined result
 
-assert (division (+0, +1) == +0, '+0 / +1 == +0');
+assert(division (+0, +1) == +0, '+0 / +1 == +0');
 //test passed
+
+assert(division (+0, -1) == -0, '+0 / -1 == -0');
+assert(division (+1, +1) == +1, '+1 / =1 == +1');
 
