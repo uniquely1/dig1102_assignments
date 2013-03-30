@@ -43,3 +43,12 @@ assert( subtraction(+0, +1) == -1, '+0 - +1 == -1');
 assert( subtraction(+0, -1) == +1, '+0 - -1 == +1');
 assert( subtraction(+1, +1) == +0, '+1 - +1 == +0');
 
+
+//refactored assert function
+function testSubtraction(a, b, c){
+    assert(subtraction(a, b) == c);
+}
+
+//first test w/refactored assert function
+testSubtraction(+1, -1, +0);
+//test failed
