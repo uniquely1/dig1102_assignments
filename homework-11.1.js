@@ -18,4 +18,13 @@ var assert = require("assert");
   * +0 | +1 | +0
   * +0 | -1 | +0
   * +1 | +1 | +1
-  * +1 |-1 | -1
+  * +1 | -1 | -1
+  * +1 | +2 | +2
+  * -1 | -2 | +2
+  * +2 | +2 | +4
+  * -2 | +2 | -4
+  */
+  
+ //first multiplication test
+ assert( multiplication(+0, +0) == +1, '+0 * +0 == +1');
+ 
