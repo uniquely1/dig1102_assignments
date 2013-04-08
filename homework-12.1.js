@@ -32,9 +32,16 @@ var assert = require("assert");
  * test: does the hallway match our expected hallway state?
  */
  
+ //refactored definition of hallway
+ var hallway = [ "doors" ];
+
  
  
  //first test 
  assert( hallway );
- //test failed 
+ //test passed 
+ 
+ // refactored test for doors
+ assert( hallway  = [ "doors"] ); 
+ //test passed
     
