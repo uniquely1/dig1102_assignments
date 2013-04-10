@@ -32,5 +32,3 @@ var assert = require("assert");
  * test: does the hallway match our expected hallway state?
  */
  
- 
-    
