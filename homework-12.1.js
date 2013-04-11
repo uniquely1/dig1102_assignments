@@ -31,4 +31,27 @@ var assert = require("assert");
  * do: PASS 3 -- take a walk down the hallway, change the state of the doors
  * test: does the hallway match our expected hallway state?
  */
- 
+
+//hallway redefined
+var hallway = hallwayDoors;
+var hallwayDoors =  ('0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,');
+
+    
+
+
+
+
+    
+
+//first test no code written
+//assert( hallway);
+//test failed as expected
+//test passed after hallway redefined first time
+
+//test for doors
+assert( hallway = hallwayDoors); 
+//test passed
+
+// test for 100 doors
+assert( hallwayDoors.length = 100, 'hallwayDoors.length = 100');
+//test passed
