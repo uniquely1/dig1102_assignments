@@ -33,9 +33,19 @@ var assert = require("assert");
  */
 
 //hallway defined
-var hallway = [];
+var hallway = [ 'doors' ];
+
+//hallway defined with doors
+var hallway = hallwayDoors;
+
+var hallwayDoors = ( '0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0');
 
 //first test
-assert( hallway = hallway);
+assert( hallway = hallway );
 //test failed
-//test passed after hallway defined
+//test  passed after hallway defined
+
+//test for doors in hallway
+assert( hallway.doors);
+//test passed
+
