@@ -36,20 +36,24 @@ var assert = require("assert");
 var hallway = [];
 
 //define hallway doors
-var hallwayDoors = [];
-
+var hallwayDoors = ( '0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0');
+   
 
 
 //hallway test
-assert(hallway);
+assert( hallway );
 //test failed; hallway not defined
 //test passed with hallway defined
 
 //test for hallway doors
-assert(hallwayDoors);
+assert( hallwayDoors );
 //test failed; hallwayDoors not defined
 //test passed; hallwayDoors defined
 
 //test for 100 doors
 assert( hallwayDoors.length = 100, 'hallwayDoors.length = [100]');
 //test for 100 doors passed
+
+//test if all hallwayDoors are closed
+assert ( hallwayDoors.every = 0, 'hallwayDoors.every = 0');
+//test failed 
