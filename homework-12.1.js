@@ -32,20 +32,20 @@ var assert = require("assert");
  * test: does the hallway match our expected hallway state?
  */
 
-//hallway defined
-var hallway = [ 'doors' ];
+//define hallway
+var hallway = [];
 
-//hallway defined with doors
-var hallway = hallwayDoors;
+//define hallway doors
+var hallwayDoors = [];
 
-var hallwayDoors = ( '0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0');
 
-//first test
-assert( hallway = hallway );
-//test failed
-//test  passed after hallway defined
 
-//test for doors in hallway
-assert( hallway.doors);
-//test passed
+//hallway test
+assert(hallway);
+//test failed; hallway not defined
+//test passed with hallway defined
 
+//test for hallway doors
+assert(hallwayDoors);
+//test failed; hallwayDoors not defined
+//test passed; hallwayDoors defined
