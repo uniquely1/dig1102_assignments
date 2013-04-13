@@ -49,3 +49,7 @@ assert(hallway);
 assert(hallwayDoors);
 //test failed; hallwayDoors not defined
 //test passed; hallwayDoors defined
+
+//test for 100 doors
+assert( hallwayDoors.length = 100, 'hallwayDoors.length = [100]');
+//test for 100 doors passed
