@@ -26,6 +26,8 @@ var assert = require("assert"),
  //test passed after adding doors to hallway
  
  // do we have 10 doors?
- assert(hundredDoors.hallway.doors.length, 10);
+ assert.equal(hundredDoors.hallway.doors.length, 10);
  //test failed first time ran
  //test passed when 10 door items added
+ 
+ assert(hundredDoors.hallway)
