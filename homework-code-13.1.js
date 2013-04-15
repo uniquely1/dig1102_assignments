@@ -1,6 +1,3 @@
-var assert = require("assert");
-    
-
 /**
  * Imagine a hallway with 100 doors. All of them are closed.
  * Take a walk down the hallway. Open every door.
@@ -19,18 +16,6 @@ var assert = require("assert");
  *  - the number of the passes taken so far: passes (Number) = 0
  *  - a method of walking down the hallway for 100 passes: allPasses (Function)
  */
- 
- /**
- * test: do we have a hallway?
- * test: do we have doors in our hallway?
- * test: do we have 100 doors?
- * test: are all the doors closed?
- * do: PASS 1 -- take a walk down the hallway, change the state of the doors
- * test: are all the doors open?
- * do: PASS 2 -- take a walk down the hallway, change the state of the doors
- * test: is every EVEN door closed? is every ODD door open?
- * do: PASS 3 -- take a walk down the hallway, change the state of the doors
- * test: does the hallway match our expected hallway state?
- */
-
-//define hallway
+module.exports = { // PROD CODE
+        hallway: {},
+};
