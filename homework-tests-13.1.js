@@ -16,18 +16,12 @@ var assert = require("assert"),
  */
  
  //do we have a hallway?
- assert(hundredDoors.hallway);
- //test failed at first
- //test passed after defining hallway
+ 
  
  //do we have doors?
- assert(hundredDoors.hallway.doors);
- //test failed at first
- //test passed after adding doors to hallway
  
- // do we have 10 doors?
- assert.equal(hundredDoors.hallway.doors.length, 10);
- //test failed first time ran
- //test passed when 10 door items added
  
- assert(hundredDoors.hallway)
+ //do we have 10 doors?
+ 
+ 
+ 
