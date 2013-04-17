@@ -16,7 +16,9 @@ var assert = require("assert"),
  */
  
  //do we have a hallway?
- 
+ assert(hundredDoors.hallway);
+ //hallway not defined
+ //hallway now defined
  
  //do we have doors?
  
