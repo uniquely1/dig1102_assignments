@@ -34,6 +34,9 @@ hundredDoors.hallway.doors.forEach(function(door){
 });
 //doors are all closed
 
+//do pass 1; change state of doors?
+assert.equal(hundredDoors.hallway.doors.toggle);
+
  
  
  
