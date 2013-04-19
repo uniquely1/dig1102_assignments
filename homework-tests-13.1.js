@@ -16,23 +16,15 @@ var assert = require("assert"),
  */
  
  //do we have a hallway?
- assert(hundredDoors.hallway);
- //hallway not defined
- //hallway now defined
+ 
  
  //do we have doors?
- assert(hundredDoors.hallway.doors);
- //hallway now has doors
+ 
  
  //do we have 10 doors?
- assert.equal(hundredDoors.hallway.length, 10);
- //test failed
- //yes we have 10 doors
  
  //are all the doors closed?
-//hundredDoors.hallway.doors.forEach(function(door){
-  //  assert.equal(door, 0);
-//});
+
  
  
  
