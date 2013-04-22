@@ -18,6 +18,8 @@ var assert = require("assert"),
  //do we have a hallway?
  assert(hundredDoors.hallway);
  //hallway undefined
+ //hallway now defined
+ 
  
  
  
