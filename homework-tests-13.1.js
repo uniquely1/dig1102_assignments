@@ -26,9 +26,14 @@ var assert = require("assert"),
  //doors now defined
  
  //do we have 10 doors?
- assert.equal(hundredDoors.hallway.doors, 10);
+ assert.equal(hundredDoors.hallway.doors.length, 10);
  //we don't have 10 doors yet
  //we now have 10 doors
+ 
+ //are all the doors closed?
+ hundredDoors.hallway.doors.forEach(function(door){
+            assert.equal(door, 0);
+});
  
  
  
