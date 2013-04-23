@@ -34,6 +34,9 @@ var assert = require("assert"),
  hundredDoors.hallway.doors.forEach(function(door){
             assert.equal(door, 0);
 });
+//doors are all closed
+
+
  
  
  
