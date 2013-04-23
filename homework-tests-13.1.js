@@ -23,6 +23,11 @@ var assert = require("assert"),
  //do we have doors in our hallway?
  assert(hundredDoors.hallway.doors);
  //doors not defined
+ //doors now defined
+ 
+ //do we have 10 doors?
+ assert.equal(hundredDoors.hallway.doors, 10);
+ //we don't have 10 doors yet
  
  
  
