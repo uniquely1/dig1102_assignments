@@ -28,6 +28,7 @@ var assert = require("assert"),
  //do we have 10 doors?
  assert.equal(hundredDoors.hallway.doors, 10);
  //we don't have 10 doors yet
+ //we now have 10 doors
  
  
  
