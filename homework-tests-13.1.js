@@ -15,7 +15,24 @@ var assert = require("assert"),
  * test: does the hallway match our expected hallway state?
  */
  
+//do we have a hallway?
+assert( hundredDoors.hallway );
+//hallway not defined
+//hallway now defined
 
+//do we have doors in our hallway?
+assert( hundredDoors.hallway.doors);
+//we have doors
+
+//do we have 10 doors?
+assert.equal(hundredDoors.hallway.doors.length, 10);
+//yes we have 10 doors in our list
+
+//are all the doors closed?
+hundredDoors.hallway.doors.forEach(function(door)){
+    assert.equal(doors, 0);
+});
+//yes all the doors are closed
  
  
  
